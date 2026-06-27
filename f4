@@ -1,5 +1,0 @@
-def nangua(i, j):
-	if (i + j) % 4 == 2:
-		if get_ground_type() != Grounds.Soil:
-			till()
-		plant(Entities.Pumpkin)
