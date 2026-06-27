@@ -1,0 +1,3 @@
+def water():
+	if get_water() < 0.2:
+		use_item(Items.Water)
