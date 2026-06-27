@@ -1,0 +1,5 @@
+def cao(i, j):
+	if (i + j) % 4 == 1:
+		if get_ground_type() == Grounds.Soil:
+			till()
+		plant(Entities.Grass)
