@@ -1,0 +1,39 @@
+import f0
+import f1
+import f2
+import f3
+import pumpkin_ready
+
+clear()
+
+pet_the_piggy()
+
+while True:
+	size = get_world_size()
+	all_pumpkins_ready = True
+
+	for i in range(size):
+		for j in range(size):
+			f0.water()
+			
+			x = get_pos_x()
+			y = get_pos_y()
+
+			if x < 4 and y < 4:
+				if not pumpkin_ready.check_pumpkin_cell():
+					all_pumpkins_ready = False
+
+			else:
+				if can_harvest():
+					harvest()
+
+				f1.carrot(i, j)
+				f2.cao(i, j)
+				f3.Tree(i, j)
+
+			move(North)
+
+		move(East)
+
+	if all_pumpkins_ready:
+		harvest()
