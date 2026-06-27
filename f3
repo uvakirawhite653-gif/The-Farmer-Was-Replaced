@@ -1,0 +1,5 @@
+def Tree(i, j):
+	if (i + j) % 4 == 3:
+		if get_ground_type() == Grounds.Soil:
+			till()
+		plant(Entities.Tree)
