@@ -1,0 +1,15 @@
+def check_pumpkin_cell():
+	if get_ground_type() != Grounds.Soil:
+		till()
+		return False
+
+	# 只要当前位置不是正常南瓜，就一直尝试补种
+	while get_entity_type() != Entities.Pumpkin:
+		plant(Entities.Pumpkin)
+
+	# 到这里说明：当前格已经是正常南瓜
+	# 但不代表它成熟了
+	if can_harvest():
+		return True
+	else:
+		return False
